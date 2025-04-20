@@ -1,20 +1,24 @@
 # SHL Assessment Recommendation System
 
-[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app)
-[![FastAPI](https://img.shields.io/badge/API-Local_Endpoint-009688?logo=fastapi)](http://127.0.0.1:8000)
+[![Streamlit Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app)
+[![FastAPI Docs](https://img.shields.io/badge/API-Local_Endpoint-009688?logo=fastapi)](http://127.0.0.1:8000/docs)
 
-An intelligent system to recommend SHL assessments using web scraping and ML-powered relevance scoring.
+Intelligent recommendation system for SHL assessments using ML and web scraping.
 
-## 🚀 Live Demo
+## 📁 Project Structure
 
-- **Web Interface**: [SHL Recommendation App](https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app)
-- **API Endpoint**: `http://127.0.0.1:8000` (Run locally)
+| File | Description |
+|------|-------------|
+| `main.py` | FastAPI server (API endpoints and recommendation logic) |
+| `app.py` | Streamlit web interface for interactive queries |
+| `SHL CATALOGUE SCRAPPER.ipynb` | Jupyter notebook for scraping SHL product catalog |
+| `updated_shl_data.xlsx` | Processed dataset containing assessment details |
+| `requirements.txt` | Python dependencies list |
+| `README.md` | This documentation file |
 
-## ⚙️ Installation & Setup
+## 🚀 Quick Start
 
+1. **Clone Repository**
 ```bash
-git clone https://github.com/username/shl-recs.git
-cd shl-recs
-python -m venv venv
-source venv/bin/activate  # Linux/Mac | venv\Scripts\activate for Windows
-pip install -r requirements.txt
+git clone https://github.com/yourusername/shl-recommender.git
+cd shl-recommender
