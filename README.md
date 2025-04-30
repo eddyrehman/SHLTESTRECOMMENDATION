@@ -1,24 +1,38 @@
 # SHL Assessment Recommendation System
 
-[![Streamlit Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app)
-[![FastAPI Docs](https://img.shields.io/badge/API-Local_Endpoint-009688?logo=fastapi)](http://127.0.0.1:8000/docs)
+An intelligent system that recommends relevant SHL assessments based on natural language queries, replacing traditional keyword searches.
 
-Intelligent recommendation system for SHL assessments using ML and web scraping.
+## 🌟 Live Demos
+- **API Documentation**: [https://shltestrecommendation.onrender.com/docs](https://shltestrecommendation.onrender.com/docs)
+- **Web Application**: [https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app](https://shltestrecommendation-my72qvrsky9rd8vf6xhmsg.streamlit.app)
 
 ## 📁 Project Structure
 
-| File | Description |
-|------|-------------|
-| `main.py` | FastAPI server (API endpoints and recommendation logic) |
-| `app.py` | Streamlit web interface for interactive queries |
-| `SHL CATALOGUE SCRAPPER.ipynb` | Jupyter notebook for scraping SHL product catalog |
-| `updated_shl_data.xlsx` | Processed dataset containing assessment details |
-| `requirements.txt` | Python dependencies list |
-| `README.md` | This documentation file |
+## 🚀 Deployment Architecture
+1. **Backend API** (FastAPI)
+   - Hosted on Render
+   - Endpoints:
+     - `POST /recommend` - Get assessment recommendations
+     - `GET /health` - Service status check
 
-## 🚀 Quick Start
+2. **Frontend UI** (Streamlit)
+   - Hosted on Streamlit Community Cloud
+   - Features:
+     - Natural language query input
+     - Filter by duration
+     - Interactive results table
 
-1. **Clone Repository**
+## 🔧 Installation (Local Development)
 ```bash
-git clone https://github.com/yourusername/shl-recommender.git
-cd shl-recommender
+# Clone repository
+git clone https://github.com/eddyrehman/SHLTESTRECOMMENDATION.git
+cd SHLTESTRECOMMENDATION
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run FastAPI server
+uvicorn app.main:app --reload
+
+# Run Streamlit app (in another terminal)
+streamlit run app/app.py
